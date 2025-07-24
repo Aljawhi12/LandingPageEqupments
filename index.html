@@ -1,714 +1,1331 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ورشة المعدات الثقيلة - Heavy Equipment Workshop</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-        :root {
-            --primary-color: #ff6b35;
-            --secondary-color: #2c3e50;
-            --accent-color: #f39c12;
-            --dark-color: #1a1a1a;
-            --light-gray: #f8f9fa;
-            --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f39c12 100%);
-            --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
-        }
+      :root {
+        --primary-color: #ff6b35;
+        --secondary-color: #2c3e50;
+        --accent-color: #f39c12;
+        --dark-color: #1a1a1a;
+        --light-gray: #f8f9fa;
+        --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f39c12 100%);
+        --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+      }
 
-        * {
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Cairo', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+      body {
+        font-family: "Cairo", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-        body[dir="ltr"] {
-            font-family: 'Inter', sans-serif;
-        }
+      body[dir="ltr"] {
+        font-family: "Inter", sans-serif;
+      }
 
-        /* Language Toggle */
-        .language-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1050;
-            background: var(--gradient-primary);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-            transition: all 0.3s ease;
-        }
+      /* Language Toggle */
+      .language-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1050;
+        background: var(--gradient-primary);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        transition: all 0.3s ease;
+      }
 
-        .language-toggle:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
+      .language-toggle:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+      }
 
-        /* Hero Section */
-        .hero-section {
-            height: 100vh;
-            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(44, 62, 80, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23333" width="1920" height="1080"/><g fill="%23ff6b35" opacity="0.1"><circle cx="200" cy="200" r="100"/><circle cx="800" cy="300" r="150"/><circle cx="1400" cy="500" r="120"/><rect x="300" y="600" width="200" height="100" transform="rotate(45 400 650)"/></g></svg>');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+      /* Hero Section */
+      .hero-section {
+        height: 100vh;
+        background: linear-gradient(
+            rgba(26, 26, 26, 0.7),
+            rgba(44, 62, 80, 0.8)
+          ),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23333" width="1920" height="1080"/><g fill="%23ff6b35" opacity="0.1"><circle cx="200" cy="200" r="100"/><circle cx="800" cy="300" r="150"/><circle cx="1400" cy="500" r="120"/><rect x="300" y="600" width="200" height="100" transform="rotate(45 400 650)"/></g></svg>');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
 
-        .hero-content {
-            text-align: center;
-            color: white;
-        }
+      .hero-content {
+        text-align: center;
+        color: white;
+      }
 
+      .hero-title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: slideInUp 1s ease-out;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: slideInUp 1s ease-out 0.2s both;
+      }
+
+      .hero-btn {
+        background: var(--gradient-primary);
+        border: none;
+        padding: 15px 40px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        animation: slideInUp 1s ease-out 0.4s both;
+      }
+
+      .hero-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        color: white;
+      }
+
+      /* Floating Animation */
+      .floating-icons {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .floating-icon {
+        position: absolute;
+        color: var(--primary-color);
+        opacity: 0.1;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating-icon:nth-child(1) {
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+      }
+      .floating-icon:nth-child(2) {
+        top: 60%;
+        left: 80%;
+        animation-delay: 2s;
+      }
+      .floating-icon:nth-child(3) {
+        top: 40%;
+        left: 70%;
+        animation-delay: 4s;
+      }
+
+      /* Services Section */
+      .services-section {
+        padding: 100px 0;
+        background: var(--light-gray);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+
+      .section-title p {
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .service-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 20px;
+        text-align: center;
+        height: 100%;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-primary);
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover::before {
+        left: 0;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .service-card h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+      }
+
+      /* Gallery Section */
+      .gallery-section {
+        padding: 100px 0;
+        background: white;
+      }
+
+      .gallery-filters {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .filter-btn {
+        background: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 10px 25px;
+        margin: 0 10px 10px 0;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--gradient-primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 0;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        height: 250px;
+        background: var(--light-gray);
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 107, 53, 0.9),
+          rgba(243, 156, 18, 0.9)
+        );
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay h5 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .gallery-overlay p {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .gallery-overlay .btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .gallery-overlay .btn:hover {
+        background: white;
+        color: var(--primary-color);
+      }
+
+      /* Modal Styles */
+      .modal-content {
+        background: transparent;
+        border: none;
+      }
+
+      .modal-header {
+        border: none;
+        padding: 0;
+      }
+
+      .modal-body {
+        padding: 0;
+        text-align: center;
+      }
+
+      .modal-body img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+
+      .modal-info {
+        background: white;
+        padding: 30px;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+      }
+
+      .modal-info h5 {
+        color: var(--secondary-color);
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .modal-info p {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+        /* Add this to show the Bootstrap close icon */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='black' class='bi bi-x' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px 16px;
+      }
+
+      /* About Section */
+      .about-section {
+        padding: 100px 0;
+        background: var(--light-gray);
+      }
+
+      .about-image {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 30px;
+      }
+
+      .about-content p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .feature-list li {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .feature-list li i {
+        color: var(--primary-color);
+        margin-left: 15px;
+        font-size: 1.2rem;
+      }
+
+      body[dir="ltr"] .feature-list li i {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 100px 0;
+        background: var(--gradient-dark);
+        color: white;
+      }
+
+      .contact-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 1.5rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--dark-color);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      /* Animations */
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(180deg);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
         .hero-title {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: slideInUp 1s ease-out;
+          font-size: 2.5rem;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: slideInUp 1s ease-out 0.2s both;
-        }
-
-        .hero-btn {
-            background: var(--gradient-primary);
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            animation: slideInUp 1s ease-out 0.4s both;
-        }
-
-        .hero-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
-            color: white;
-        }
-
-        /* Floating Animation */
-        .floating-icons {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .floating-icon {
-            position: absolute;
-            color: var(--primary-color);
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-icon:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .floating-icon:nth-child(2) { top: 60%; left: 80%; animation-delay: 2s; }
-        .floating-icon:nth-child(3) { top: 40%; left: 70%; animation-delay: 4s; }
-
-        /* Services Section */
-        .services-section {
-            padding: 100px 0;
-            background: var(--light-gray);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
+          font-size: 1.2rem;
         }
 
         .section-title h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+          font-size: 2rem;
         }
 
-        .section-title p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
+        .language-toggle {
+          top: 10px;
+          right: 10px;
+          padding: 8px 12px;
+          font-size: 0.9rem;
         }
 
-        .service-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            height: 100%;
-            transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
+        .gallery-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-primary);
-            transition: all 0.3s ease;
+        .gallery-item {
+          height: 140px;
         }
 
-        .service-card:hover::before {
-            left: 0;
+        .filter-btn {
+          margin: 0 5px 10px 0;
+          padding: 8px 20px;
+          font-size: 0.9rem;
         }
+      }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
+      /* RTL Adjustments */
+      body[dir="rtl"] .language-toggle {
+        right: auto;
+        left: 20px;
+      }
 
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            color: white;
-            font-size: 2rem;
-        }
+      body[dir="rtl"] .floating-icon:nth-child(1) {
+        left: auto;
+        right: 10%;
+      }
+      body[dir="rtl"] .floating-icon:nth-child(2) {
+        left: auto;
+        right: 80%;
+      }
+      body[dir="rtl"] .floating-icon:nth-child(3) {
+        left: auto;
+        right: 70%;
+      }
 
-        .service-card h4 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .about-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 30px;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .feature-list li i {
-            color: var(--primary-color);
-            margin-left: 15px;
-            font-size: 1.2rem;
-        }
-
-        body[dir="ltr"] .feature-list li i {
-            margin-left: 0;
-            margin-right: 15px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 100px 0;
-            background: var(--gradient-dark);
-            color: white;
-        }
-
-        .contact-card {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            height: 100%;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.15);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.5rem;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark-color);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        /* Animations */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .language-toggle {
-                top: 10px;
-                right: 10px;
-                padding: 8px 12px;
-                font-size: 0.9rem;
-            }
-        }
-
-        /* RTL Adjustments */
+      @media (max-width: 768px) {
         body[dir="rtl"] .language-toggle {
-            right: auto;
-            left: 20px;
+          left: 10px;
         }
+      }
 
-        body[dir="rtl"] .floating-icon:nth-child(1) { left: auto; right: 10%; }
-        body[dir="rtl"] .floating-icon:nth-child(2) { left: auto; right: 80%; }
-        body[dir="rtl"] .floating-icon:nth-child(3) { left: auto; right: 70%; }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
 
-        @media (max-width: 768px) {
-            body[dir="rtl"] .language-toggle {
-                left: 10px;
-            }
+      /* Loading animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 576px) {
+        .services-section {
+          padding: 40px 0;
         }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        .services-section .row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
         }
-
-        /* Loading animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        .section-title h2 {
+          font-size: 1.3rem;
         }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .section-title p {
+          font-size: 1rem;
+          max-width: 95vw;
         }
-        /* Add this after your existing responsive @media (max-width: 768px) block */
-
-@media (max-width: 576px) {
-    .services-section {
-        padding: 40px 0;
-    }
-    .section-title h2 {
-        font-size: 1.3rem;
-    }
-    .section-title p {
-        font-size: 1rem;
-        max-width: 95vw;
-    }
-    .service-card {
-        padding: 20px 10px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-    }
-    .service-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-    }
-    .service-card h4 {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-    }
-    .about-section,
-    .contact-section {
-        padding: 40px 0;
-    }
-    .about-content h2 {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-    }
-    .about-content p {
-        font-size: 0.95rem;
-        margin-bottom: 10px;
-    }
-    .feature-list li {
-        font-size: 0.95rem;
-        padding: 6px 0;
-    }
-    .contact-card {
-        padding: 20px 10px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-    }
-    .contact-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-    .footer {
-        padding: 20px 0;
-        font-size: 0.95rem;
-    }
-    .hero-title {
-        font-size: 1.5rem;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    .hero-btn {
-        padding: 10px 20px;
-        font-size: 0.95rem;
-    }
-    .floating-icons {
-        display: none;
-    }
-}
+        .service-card {
+          padding: 20px 10px;
+          border-radius: 12px;
+          margin-bottom: 0;
+        }
+        .service-icon {
+          width: 50px;
+          height: 50px;
+          font-size: 1.3rem;
+          margin-bottom: 15px;
+        }
+        .service-card h4 {
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+        }
+        .about-section,
+        .contact-section,
+        .gallery-section {
+          padding: 40px 0;
+        }
+        .about-content h2 {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+        }
+        .about-content p {
+          font-size: 0.95rem;
+          margin-bottom: 10px;
+        }
+        .feature-list li {
+          font-size: 0.95rem;
+          padding: 6px 0;
+        }
+        .contact-card {
+          padding: 20px 10px;
+          border-radius: 12px;
+          margin-bottom: 20px;
+        }
+        .contact-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+          margin-bottom: 10px;
+        }
+        .footer {
+          padding: 20px 0;
+          font-size: 0.95rem;
+        }
+        .hero-title {
+          font-size: 1.5rem;
+        }
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+        .hero-btn {
+          padding: 10px 20px;
+          font-size: 0.95rem;
+        }
+        .floating-icons {
+          display: none;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Language Toggle -->
     <button class="language-toggle" onclick="toggleLanguage()">
-        <i class="fas fa-language"></i>
-        <span id="langText">EN</span>
+      <i class="fas fa-language"></i>
+      <span id="langText">EN</span>
     </button>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="floating-icons">
-            <i class="fas fa-cog floating-icon fa-3x"></i>
-            <i class="fas fa-truck floating-icon fa-4x"></i>
-            <i class="fas fa-tools floating-icon fa-3x"></i>
+      <div class="floating-icons">
+        <i class="fas fa-cog floating-icon fa-3x"></i>
+        <i class="fas fa-truck floating-icon fa-4x"></i>
+        <i class="fas fa-tools floating-icon fa-3x"></i>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <h1
+            class="hero-title"
+            data-ar="ورشة إصلاح المعدات الثقيلة"
+            data-en="Heavy Equipment Workshop"
+          >
+            ورشة إصلاح المعدات الثقيلة
+          </h1>
+          <p
+            class="hero-subtitle"
+            data-ar="خبرة تزيد عن 15 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة"
+            data-en="Over 15 years of experience in maintenance and repair of all types of heavy equipment"
+          >
+            خبرة تزيد عن 15 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة
+          </p>
+          <a href="#services" class="btn hero-btn">
+            <span data-ar="خدماتنا" data-en="Our Services">خدماتنا</span>
+            <i class="fas fa-arrow-down ms-2"></i>
+          </a>
         </div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-ar="ورشة إصلاح المعدات الثقيلة" data-en="Heavy Equipment Workshop">ورشة إصلاح المعدات الثقيلة</h1>
-                <p class="hero-subtitle" data-ar="خبرة تزيد عن 15 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة" data-en="Over 15 years of experience in maintenance and repair of all types of heavy equipment">خبرة تزيد عن 15 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة</p>
-                <a href="#services" class="btn hero-btn">
-                    <span data-ar="خدماتنا" data-en="Our Services">خدماتنا</span>
-                    <i class="fas fa-arrow-down ms-2"></i>
-                </a>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-ar="خدماتنا المتخصصة" data-en="Our Specialized Services">خدماتنا المتخصصة</h2>
-                <p data-ar="نقدم مجموعة شاملة من خدمات الصيانة والإصلاح للمعدات الثقيلة بأعلى معايير الجودة" data-en="We provide a comprehensive range of maintenance and repair services for heavy equipment with the highest quality standards">نقدم مجموعة شاملة من خدمات الصيانة والإصلاح للمعدات الثقيلة بأعلى معايير الجودة</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-wrench"></i>
-                        </div>
-                        <h4 data-ar="الإصلاح العام" data-en="General Repair">الإصلاح العام</h4>
-                        <p data-ar="إصلاح شامل لجميع أنواع المعدات الثقيلة مع ضمان الجودة والكفاءة" data-en="Comprehensive repair for all types of heavy equipment with quality and efficiency guarantee">إصلاح شامل لجميع أنواع المعدات الثقيلة مع ضمان الجودة والكفاءة</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h4 data-ar="صيانة المحركات" data-en="Engine Maintenance">صيانة المحركات</h4>
-                        <p data-ar="صيانة وإصلاح محركات الديزل والبنزين مع استخدام قطع غيار أصلية" data-en="Maintenance and repair of diesel and gasoline engines using original spare parts">صيانة وإصلاح محركات الديزل والبنزين مع استخدام قطع غيار أصلية</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-oil-can"></i>
-                        </div>
-                        <h4 data-ar="الأنظمة الهيدروليكية" data-en="Hydraulic Systems">الأنظمة الهيدروليكية</h4>
-                        <p data-ar="إصلاح وصيانة الأنظمة الهيدروليكية والمضخات بأحدث التقنيات" data-en="Repair and maintenance of hydraulic systems and pumps with the latest technologies">إصلاح وصيانة الأنظمة الهيدروليكية والمضخات بأحدث التقنيات</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h4 data-ar="الأنظمة الكهربائية" data-en="Electrical Systems">الأنظمة الكهربائية</h4>
-                        <p data-ar="تشخيص وإصلاح الأعطال الكهربائية وأنظمة التحكم الإلكترونية" data-en="Diagnosis and repair of electrical faults and electronic control systems">تشخيص وإصلاح الأعطال الكهربائية وأنظمة التحكم الإلكترونية</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4 data-ar="الصيانة الوقائية" data-en="Preventive Maintenance">الصيانة الوقائية</h4>
-                        <p data-ar="برامج صيانة دورية لضمان الأداء الأمثل وتجنب الأعطال المفاجئة" data-en="Regular maintenance programs to ensure optimal performance and avoid sudden breakdowns">برامج صيانة دورية لضمان الأداء الأمثل وتجنب الأعطال المفاجئة</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <h4 data-ar="الخدمة الطارئة" data-en="Emergency Service">الخدمة الطارئة</h4>
-                        <p data-ar="خدمة إصلاح طارئة 24/7 للحالات العاجلة في الموقع" data-en="24/7 emergency repair service for urgent on-site cases">خدمة إصلاح طارئة 24/7 للحالات العاجلة في الموقع</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2 data-ar="خدماتنا المتخصصة" data-en="Our Specialized Services">
+            خدماتنا المتخصصة
+          </h2>
+          <p
+            data-ar="نقدم مجموعة شاملة من خدمات الصيانة والإصلاح للمعدات الثقيلة بأعلى معايير الجودة"
+            data-en="We provide a comprehensive range of maintenance and repair services for heavy equipment with the highest quality standards"
+          >
+            نقدم مجموعة شاملة من خدمات الصيانة والإصلاح للمعدات الثقيلة بأعلى
+            معايير الجودة
+          </p>
         </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h4 data-ar="الإصلاح العام" data-en="General Repair">
+                الإصلاح العام
+              </h4>
+              <p
+                data-ar="إصلاح شامل لجميع أنواع المعدات الثقيلة مع ضمان الجودة والكفاءة"
+                data-en="Comprehensive repair for all types of heavy equipment with quality and efficiency guarantee"
+              >
+                إصلاح شامل لجميع أنواع المعدات الثقيلة مع ضمان الجودة والكفاءة
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h4 data-ar="صيانة المحركات" data-en="Engine Maintenance">
+                صيانة المحركات
+              </h4>
+              <p
+                data-ar="صيانة وإصلاح محركات الديزل والبنزين مع استخدام قطع غيار أصلية"
+                data-en="Maintenance and repair of diesel and gasoline engines using original spare parts"
+              >
+                صيانة وإصلاح محركات الديزل والبنزين مع استخدام قطع غيار أصلية
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-oil-can"></i>
+              </div>
+              <h4 data-ar="الأنظمة الهيدروليكية" data-en="Hydraulic Systems">
+                الأنظمة الهيدروليكية
+              </h4>
+              <p
+                data-ar="إصلاح وصيانة الأنظمة الهيدروليكية والمضخات بأحدث التقنيات"
+                data-en="Repair and maintenance of hydraulic systems and pumps with the latest technologies"
+              >
+                إصلاح وصيانة الأنظمة الهيدروليكية والمضخات بأحدث التقنيات
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h4 data-ar="الأنظمة الكهربائية" data-en="Electrical Systems">
+                الأنظمة الكهربائية
+              </h4>
+              <p
+                data-ar="تشخيص وإصلاح الأعطال الكهربائية وأنظمة التحكم الإلكترونية"
+                data-en="Diagnosis and repair of electrical faults and electronic control systems"
+              >
+                تشخيص وإصلاح الأعطال الكهربائية وأنظمة التحكم الإلكترونية
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4 data-ar="الصيانة الوقائية" data-en="Preventive Maintenance">
+                الصيانة الوقائية
+              </h4>
+              <p
+                data-ar="برامج صيانة دورية لضمان الأداء الأمثل وتجنب الأعطال المفاجئة"
+                data-en="Regular maintenance programs to ensure optimal performance and avoid sudden breakdowns"
+              >
+                برامج صيانة دورية لضمان الأداء الأمثل وتجنب الأعطال المفاجئة
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-ambulance"></i>
+              </div>
+              <h4 data-ar="الخدمة الطارئة" data-en="Emergency Service">
+                الخدمة الطارئة
+              </h4>
+              <p
+                data-ar="خدمة إصلاح طارئة 24/7 للحالات العاجلة في الموقع"
+                data-en="24/7 emergency repair service for urgent on-site cases"
+              >
+                خدمة إصلاح طارئة 24/7 للحالات العاجلة في الموقع
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2 data-ar="معرض المعدات" data-en="Equipment Gallery">
+            معرض المعدات
+          </h2>
+          <p
+            data-ar="شاهد أحدث أعمالنا والمعدات التي نتعامل معها"
+            data-en="View our latest work and equipment we handle"
+          >
+            شاهد أحدث أعمالنا والمعدات التي نتعامل معها
+          </p>
+        </div>
+
+        <!-- Gallery Filters -->
+        <div class="gallery-filters fade-in">
+          <button class="filter-btn active" data-filter="all">
+            <span data-ar="الكل" data-en="All">الكل</span>
+          </button>
+          <button class="filter-btn" data-filter="excavators">
+            <span data-ar="الحفارات" data-en="Excavators">الحفارات</span>
+          </button>
+          <button class="filter-btn" data-filter="cranes">
+            <span data-ar="الرافعات" data-en="Cranes">الرافعات</span>
+          </button>
+          <button class="filter-btn" data-filter="trucks">
+            <span data-ar="الشاحنات" data-en="Trucks">الشاحنات</span>
+          </button>
+          <button class="filter-btn" data-filter="bulldozers">
+            <span data-ar="البلدوزرات" data-en="Bulldozers">البلدوزرات</span>
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid fade-in" id="galleryGrid">
+          <!-- Excavators -->
+          <div
+            class="gallery-item"
+            data-category="excavators"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('excavator1')"
+          >
+            <img src="images/1.jpeg" alt="Excavator" />
+            <div class="gallery-overlay">
+              <h5 data-ar="حفارة هيدروليكية" data-en="Hydraulic Excavator">
+                حفارة هيدروليكية
+              </h5>
+              <p
+                data-ar="إصلاح شامل للنظام الهيدروليكي"
+                data-en="Complete hydraulic system repair"
+              >
+                إصلاح شامل للنظام الهيدروليكي
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="excavators"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('excavator2')"
+          >
+            <img src="images/7.jpeg" alt="Mini Excavator" />
+            <div class="gallery-overlay">
+              <h5 data-ar="حفارة صغيرة" data-en="Mini Excavator">
+                حفارة صغيرة
+              </h5>
+              <p
+                data-ar="صيانة المحرك وإصلاح المسارات"
+                data-en="Engine maintenance and track repair"
+              >
+                صيانة المحرك وإصلاح المسارات
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <!-- Cranes -->
+          <div
+            class="gallery-item"
+            data-category="cranes"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('crane1')"
+          >
+            <img src="images/6.jpeg" alt="Mobile Crane" />
+            <div class="gallery-overlay">
+              <h5 data-ar="رافعة متنقلة" data-en="Mobile Crane">
+                رافعة متنقلة
+              </h5>
+              <p
+                data-ar="إصلاح نظام الرفع والتحكم الهيدروليكي"
+                data-en="Lifting system and hydraulic control repair"
+              >
+                إصلاح نظام الرفع والتحكم الهيدروليكي
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="cranes"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('crane2')"
+          >
+            <img src="images/8.jpeg" alt="Tower Crane" />
+            <div class="gallery-overlay">
+              <h5 data-ar="رافعة برجية" data-en="Tower Crane">رافعة برجية</h5>
+              <p
+                data-ar="صيانة دورية وفحص السلامة"
+                data-en="Regular maintenance and safety inspection"
+              >
+                صيانة دورية وفحص السلامة
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <!-- Trucks -->
+          <div
+            class="gallery-item"
+            data-category="trucks"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('truck1')"
+          >
+            <img src="images/10.jpeg" alt="Dump Truck" />
+            <div class="gallery-overlay">
+              <h5 data-ar="شاحنة تفريغ" data-en="Dump Truck">شاحنة تفريغ</h5>
+              <p
+                data-ar="إصلاح نظام التفريغ الهيدروليكي"
+                data-en="Hydraulic dumping system repair"
+              >
+                إصلاح نظام التفريغ الهيدروليكي
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="trucks"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('truck2')"
+          >
+            <img src="images/9.jpeg" alt="Transport Truck" />
+            <div class="gallery-overlay">
+              <h5 data-ar="شاحنة نقل ثقيل" data-en="Heavy Transport Truck">
+                شاحنة نقل ثقيل
+              </h5>
+              <p
+                data-ar="إصلاح المحرك وصيانة نظام النقل"
+                data-en="Engine repair and transmission maintenance"
+              >
+                إصلاح المحرك وصيانة نظام النقل
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <!-- Bulldozers -->
+          <div
+            class="gallery-item"
+            data-category="bulldozers"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('bulldozer1')"
+          >
+            <img src="images/2.jpeg" alt="Bulldozer" />
+            <div class="gallery-overlay">
+              <h5 data-ar="بلدوزر ثقيل" data-en="Heavy Bulldozer">
+                بلدوزر ثقيل
+              </h5>
+              <p
+                data-ar="إصلاح شامل للمسارات والشفرة"
+                data-en="Complete track and blade repair"
+              >
+                إصلاح شامل للمسارات والشفرة
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="gallery-item"
+            data-category="bulldozers"
+            data-bs-toggle="modal"
+            data-bs-target="#galleryModal"
+            onclick="openModal('bulldozer2')"
+          >
+            <img src="images/3.jpeg" alt="Medium Bulldozer" />
+            <div class="gallery-overlay">
+              <h5 data-ar="بلدوزر متوسط" data-en="Medium Bulldozer">
+                بلدوزر متوسط
+              </h5>
+              <p
+                data-ar="صيانة المحرك والأنظمة الهيدروليكية"
+                data-en="Engine and hydraulic systems maintenance"
+              >
+                صيانة المحرك والأنظمة الهيدروليكية
+              </p>
+              <button class="btn" data-ar="عرض التفاصيل" data-en="View Details">
+                عرض التفاصيل
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="" alt="" class="img-fluid" />
+            <div class="modal-info">
+              <h5 id="modalTitle"></h5>
+              <p id="modalDescription"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 fade-in">
-                    <div class="about-image">
-                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23f39c12' width='600' height='400'/><g fill='%23fff' opacity='0.1'><rect x='50' y='50' width='100' height='80'/><rect x='200' y='100' width='120' height='60'/><rect x='350' y='80' width='90' height='100'/><circle cx='150' cy='300' r='40'/><circle cx='350' cy='320' r='50'/><circle cx='500' cy='300' r='35'/></g><text x='300' y='200' text-anchor='middle' fill='%23fff' font-size='24' font-weight='bold'>Heavy Equipment</text><text x='300' y='230' text-anchor='middle' fill='%23fff' font-size='18'>Workshop</text></svg>" alt="Heavy Equipment Workshop" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-6 fade-in">
-                    <div class="about-content">
-                        <h2 data-ar="من نحن؟" data-en="Who We Are?">من نحن؟</h2>
-                        <p data-ar="نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد لأكثر من 15 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة لعملائنا الكرام." data-en="We are a workshop specialized in repairing and maintaining heavy equipment with experience spanning over 15 years in this field. We pride ourselves on providing high-quality services to our valued customers.">نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد لأكثر من 15 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة لعملائنا الكرام.</p>
-                        
-                        <ul class="feature-list">
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span data-ar="فريق عمل مؤهل ومدرب على أعلى مستوى" data-en="Qualified and highly trained workforce">فريق عمل مؤهل ومدرب على أعلى مستوى</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span data-ar="استخدام أحدث التقنيات والأدوات" data-en="Using the latest technologies and tools">استخدام أحدث التقنيات والأدوات</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span data-ar="قطع غيار أصلية ومضمونة" data-en="Original and guaranteed spare parts">قطع غيار أصلية ومضمونة</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                <span data-ar="أسعار تنافسية وضمان على الخدمة" data-en="Competitive prices and service warranty">أسعار تنافسية وضمان على الخدمة</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 fade-in">
+            <div class="about-image">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23f39c12' width='600' height='400'/><g fill='%23fff' opacity='0.1'><rect x='50' y='50' width='100' height='80'/><rect x='200' y='100' width='120' height='60'/><rect x='350' y='80' width='90' height='100'/><circle cx='150' cy='300' r='40'/><circle cx='350' cy='320' r='50'/><circle cx='500' cy='300' r='35'/></g><text x='300' y='200' text-anchor='middle' fill='%23fff' font-size='24' font-weight='bold'>Heavy Equipment</text><text x='300' y='230' text-anchor='middle' fill='%23fff' font-size='18'>Workshop</text></svg>"
+                alt="Heavy Equipment Workshop"
+                class="img-fluid"
+              />
             </div>
+          </div>
+          <div class="col-lg-6 fade-in">
+            <div class="about-content">
+              <h2 data-ar="من نحن؟" data-en="Who We Are?">من نحن؟</h2>
+              <p
+                data-ar="نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد لأكثر من 15 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة لعملائنا الكرام."
+                data-en="We are a workshop specialized in repairing and maintaining heavy equipment with experience spanning over 15 years in this field. We pride ourselves on providing high-quality services to our valued customers."
+              >
+                نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد
+                لأكثر من 15 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة
+                لعملائنا الكرام.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="فريق عمل مؤهل ومدرب على أعلى مستوى"
+                    data-en="Qualified and highly trained workforce"
+                    >فريق عمل مؤهل ومدرب على أعلى مستوى</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="استخدام أحدث التقنيات والأدوات"
+                    data-en="Using the latest technologies and tools"
+                    >استخدام أحدث التقنيات والأدوات</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="قطع غيار أصلية ومضمونة"
+                    data-en="Original and guaranteed spare parts"
+                    >قطع غيار أصلية ومضمونة</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="أسعار تنافسية وضمان على الخدمة"
+                    data-en="Competitive prices and service warranty"
+                    >أسعار تنافسية وضمان على الخدمة</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-ar="تواصل معنا" data-en="Contact Us" style="color: white;">تواصل معنا</h2>
-                <p data-ar="نحن هنا لخدمتكم على مدار الساعة" data-en="We are here to serve you around the clock" style="color: rgba(255,255,255,0.8);">نحن هنا لخدمتكم على مدار الساعة</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h4>
-                        <p>+966 50 123 4567</p>
-                        <p>+966 11 456 7890</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4 data-ar="راسلنا" data-en="Email Us">راسلنا</h4>
-                        <p>info@workshop.com</p>
-                        <p>service@workshop.com</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 fade-in">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4 data-ar="موقعنا" data-en="Our Location">موقعنا</h4>
-                        <p data-ar="الرياض، المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">الرياض، المملكة العربية السعودية</p>
-                        <p data-ar="المنطقة الصناعية الثانية" data-en="Industrial Area 2">المنطقة الصناعية الثانية</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title fade-in">
+          <h2 data-ar="تواصل معنا" data-en="Contact Us" style="color: white">
+            تواصل معنا
+          </h2>
+          <p
+            data-ar="نحن هنا لخدمتكم على مدار الساعة"
+            data-en="We are here to serve you around the clock"
+            style="color: rgba(255, 255, 255, 0.8)"
+          >
+            نحن هنا لخدمتكم على مدار الساعة
+          </p>
         </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h4 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h4>
+              <p>+966 50 123 4567</p>
+              <p>+966 11 456 7890</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h4 data-ar="راسلنا" data-en="Email Us">راسلنا</h4>
+              <p>info@workshop.com</p>
+              <p>service@workshop.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 fade-in">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4 data-ar="موقعنا" data-en="Our Location">موقعنا</h4>
+              <p
+                data-ar="الرياض، المملكة العربية السعودية"
+                data-en="Riyadh, Saudi Arabia"
+              >
+                الرياض، المملكة العربية السعودية
+              </p>
+              <p data-ar="المنطقة الصناعية الثانية" data-en="Industrial Area 2">
+                المنطقة الصناعية الثانية
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p data-ar="© 2024 ورشة إصلاح المعدات الثقيلة. جميع الحقوق محفوظة." data-en="© 2024 Heavy Equipment Workshop. All rights reserved.">© 2024 ورشة إصلاح المعدات الثقيلة. جميع الحقوق محفوظة.</p>
-        </div>
+      <div class="container">
+        <p
+          data-ar="© 2024 ورشة إصلاح المعدات الثقيلة. جميع الحقوق محفوظة."
+          data-en="© 2024 Heavy Equipment Workshop. All rights reserved."
+        >
+          © 2024 ورشة إصلاح المعدات الثقيلة. جميع الحقوق محفوظة.
+        </p>
+      </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        let currentLang = 'ar';
+      let currentLang = "ar";
 
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const html = document.documentElement;
-            const langText = document.getElementById('langText');
-            
-            if (currentLang === 'en') {
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
-                langText.textContent = 'AR';
-                updateContent('en');
-            } else {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                langText.textContent = 'EN';
-                updateContent('ar');
-            }
+      function toggleLanguage() {
+        currentLang = currentLang === "ar" ? "en" : "ar";
+        const html = document.documentElement;
+        const langText = document.getElementById("langText");
+
+        if (currentLang === "en") {
+          html.setAttribute("lang", "en");
+          html.setAttribute("dir", "ltr");
+          langText.textContent = "AR";
+          updateContent("en");
+        } else {
+          html.setAttribute("lang", "ar");
+          html.setAttribute("dir", "rtl");
+          langText.textContent = "EN";
+          updateContent("ar");
         }
+      }
 
-        function updateContent(lang) {
-            const elements = document.querySelectorAll('[data-ar][data-en]');
-            elements.forEach(element => {
-                if (lang === 'ar') {
-                    element.textContent = element.getAttribute('data-ar');
-                } else {
-                    element.textContent = element.getAttribute('data-en');
-                }
+      function updateContent(lang) {
+        const elements = document.querySelectorAll("[data-ar][data-en]");
+        elements.forEach((element) => {
+          if (lang === "ar") {
+            element.textContent = element.getAttribute("data-ar");
+          } else {
+            element.textContent = element.getAttribute("data-en");
+          }
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all fade-in elements
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".fade-in");
+        fadeElements.forEach((el) => observer.observe(el));
+      });
+
+      // Add loading animation
+      window.addEventListener("load", () => {
+        document.body.style.opacity = "1";
+      });
+
+      // Parallax effect for hero section
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector(".hero-section");
+        if (hero) {
+          hero.style.transform = `translateY(${scrolled * 0.5}px)`;
         }
+      });
+      // ...existing code...
+      function openModal(itemId) {
+        // Find the clicked gallery item
+        const item = document.querySelector(
+          `.gallery-item[onclick="openModal('${itemId}')"]`
+        );
+        if (!item) return;
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        // Get image src and overlay info
+        const imgSrc = item.querySelector("img").src;
+        const overlay = item.querySelector(".gallery-overlay");
+        const title = overlay.querySelector("h5");
+        const desc = overlay.querySelector("p");
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.addEventListener('DOMContentLoaded', () => {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => observer.observe(el));
-        });
-
-        // Add loading animation
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-section');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
+        // Set modal content
+        document.getElementById("modalImage").src = imgSrc;
+        document.getElementById("modalTitle").textContent = title
+          ? title.textContent
+          : "";
+        document.getElementById("modalDescription").textContent = desc
+          ? desc.textContent
+          : "";
+      }
+      // ...existing code...
     </script>
-</body>
+  </body>
 </html>
