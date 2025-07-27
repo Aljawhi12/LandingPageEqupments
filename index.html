@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <meta name="keywords" content="ورشة, معدات ثقيلة, صيانة, إصلاح, سيارات, خدمات" />
+    <meta
+      name="keywords"
+      content="ورشة, معدات ثقيلة, صيانة, إصلاح, سيارات, خدمات"
+    />
     <meta name="author" content="Perfect Repair Company" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f39c12" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="charset" content="UTF-8" />
-    <meta name="keywords" content="ورشة, معدات ثقيلة, صيانة, إصلاح, سيارات, خدمات" />
+    <meta
+      name="keywords"
+      content="ورشة, معدات ثقيلة, صيانة, إصلاح, سيارات, خدمات"
+    />
     <meta name="author" content="Perfect Repair Company" />
-    <meta name="description" content="ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة" />
-    <title>شركة التنفيذ الافضل لصيانة السيارات و المعدات-Perfect Repair Company for Cars and Heavy Equipment</title>
+    <meta
+      name="description"
+      content="ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة"
+    />
+    <title>
+      شركة التنفيذ الافضل لصيانة السيارات و المعدات-Perfect Repair Company for
+      Cars and Heavy Equipment
+    </title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,8 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-
-   
+    <script src="https://cdn.emailjs.com/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Language Toggle -->
@@ -510,63 +521,138 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="section-title fade-in">
-          <h2 data-ar="تواصل معنا" data-en="Contact Us" style="color: white">
-            تواصل معنا
-          </h2>
-          <p
-            data-ar="نحن هنا لخدمتكم على مدار الساعة"
-            data-en="We are here to serve you around the clock"
-            style="color: rgba(255, 255, 255, 0.8)"
-          >
-            نحن هنا لخدمتكم على مدار الساعة
-          </p>
+     <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2 data-ar="تواصل معنا" data-en="Contact Us" style="color: white">
+                    تواصل معنا
+                </h2>
+                <p data-ar="نحن هنا لخدمتكم على مدار الساعة" data-en="We are here to serve you around the clock" style="color: rgba(255, 255, 255, 0.8)">
+                    نحن هنا لخدمتكم على مدار الساعة
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h4>
+                        <p>+966 50 123 4567</p>
+                        <p>+966 11 456 7890</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 data-ar="راسلنا" data-en="Email Us">راسلنا</h4>
+                        <p>info@workshop.com</p>
+                        <p>service@workshop.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-in">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 data-ar="موقعنا" data-en="Our Location">موقعنا</h4>
+                        <p data-ar="الرياض، المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">
+                            الرياض، المملكة العربية السعودية
+                        </p>
+                        <p data-ar="المنطقة الصناعية الثانية" data-en="Industrial Area 2">
+                            المنطقة الصناعية الثانية
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8 fade-in">
+                    <div id="success-message" class="success-message">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <span data-ar="تم إرسال رسالتك بنجاح! سنتواصل معك قريباً" data-en="Your message has been sent successfully! We will contact you soon">
+                            تم إرسال رسالتك بنجاح! سنتواصل معك قريباً
+                        </span>
+                    </div>
+                    
+                    <div id="error-message" class="error-message">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <span data-ar="حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى" data-en="An error occurred while sending the message. Please try again">
+                            حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى
+                        </span>
+                    </div>
+
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLScGWq1teRUvs_gfqJO3-6BsgT0cSWBuhvxoDhrbwGLABsy25w/formResponse" method="POST" target="hidden_iframe" class="contact-form p-4">
+                        <div class="mb-3">
+                            <label for="name" class="form-label" data-ar="الاسم" data-en="Name">
+                                <i class="fas fa-user me-2"></i>الاسم
+                            </label>
+                            <input type="text" class="form-control" id="name" name="entry.2005620554" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label" data-ar="البريد الإلكتروني" data-en="Email">
+                                <i class="fas fa-envelope me-2"></i>البريد الإلكتروني
+                            </label>
+                            <input type="email" class="form-control" id="email" name="entry.1045781291" required placeholder="example@email.com">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="phone" class="form-label" data-ar="رقم الهاتف" data-en="Phone Number">
+                                <i class="fas fa-phone me-2"></i>رقم الهاتف (اختياري)
+                            </label>
+                            <input type="tel" class="form-control" id="phone" name="entry.1166974658" placeholder="+966 50 123 4567">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="subject" class="form-label" data-ar="الموضوع" data-en="Subject">
+                                <i class="fas fa-tag me-2"></i>الموضوع
+                            </label>
+                            <input type="text" class="form-control" id="subject" name="entry.839337160" required placeholder="موضوع الرسالة">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="form-label" data-ar="رسالتك" data-en="Your Message">
+                                <i class="fas fa-comment me-2"></i>رسالتك
+                            </label>
+                            <textarea class="form-control" id="message" name="entry.474068459" rows="5" required placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+                        
+                        <!-- Hidden field to specify recipient -->
+                        <input type="hidden" name="_to" value="alialjawhi0@gmail.com">
+                        <input type="hidden" name="_subject" value="رسالة جديدة من موقع الورشة">
+                        <input type="hidden" name="_replyto" value="">
+                        <input type="hidden" name="_next" value="">
+                        
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
+                        </button>
+                        
+                        <!-- Alternative WhatsApp Button -->
+                        <div class="text-center mt-3">
+                            <p class="mb-2" style="color: #666;">أو تواصل معنا مباشرة:</p>
+                            <a href="https://wa.me/966501234567" 
+                               class="btn btn-success w-100" 
+                               target="_blank"
+                               id="whatsappBtn">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                واتساب مباشر
+                            </a>
+                        </div>
+                        
+                        <!-- Hidden iframe for form submission -->
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-6 fade-in">
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <h4 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h4>
-              <p>+966 50 123 4567</p>
-              <p>+966 11 456 7890</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 fade-in">
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <h4 data-ar="راسلنا" data-en="Email Us">راسلنا</h4>
-              <p>info@workshop.com</p>
-              <p>service@workshop.com</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 fade-in">
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <h4 data-ar="موقعنا" data-en="Our Location">موقعنا</h4>
-              <p
-                data-ar="الرياض، المملكة العربية السعودية"
-                data-en="Riyadh, Saudi Arabia"
-              >
-                الرياض، المملكة العربية السعودية
-              </p>
-              <p data-ar="المنطقة الصناعية الثانية" data-en="Industrial Area 2">
-                المنطقة الصناعية الثانية
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Footer -->
@@ -580,7 +666,7 @@
         </p>
       </div>
     </footer>
-
+    <script src="https://cdn.emailjs.com/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
       let currentLang = "ar";
@@ -685,6 +771,84 @@
           : "";
       }
       // ...existing code...
+
+      //contact form submission
+      document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
+            // Form validation enhancement
+            const inputs = form.querySelectorAll('input:not([type="hidden"]), textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.required && !this.value.trim()) {
+                        this.classList.add('is-invalid');
+                    } else {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                    }
+                });
+
+                input.addEventListener('input', function() {
+                    if (this.classList.contains('is-invalid') && this.value.trim()) {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                    }
+                });
+            });
+
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                const submitBtn = form.querySelector('button[type="submit"]');
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>جاري الإرسال...';
+                submitBtn.disabled = true;
+                
+                // Show success message after delay
+                setTimeout(() => {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Reset button
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>إرسال الرسالة';
+                    submitBtn.disabled = false;
+                    
+                    // Reset validation classes
+                    inputs.forEach(input => {
+                        input.classList.remove('is-valid', 'is-invalid');
+                    });
+                }, 2000);
+            });
+
+            // Update WhatsApp link with form data
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            
+            inputs.forEach(input => {
+                input.addEventListener('input', updateWhatsAppLink);
+            });
+            
+            function updateWhatsAppLink() {
+                const name = form.querySelector('#name').value;
+                const email = form.querySelector('#email').value;
+                const phone = form.querySelector('#phone').value;
+                const subject = form.querySelector('#subject').value;
+                const message = form.querySelector('#message').value;
+                
+                let whatsappMessage = "مرحباً، أريد التواصل معكم\n\n";
+                
+                if (name) whatsappMessage += `الاسم: ${name}\n`;
+                if (email) whatsappMessage += `البريد: ${email}\n`;
+                if (phone) whatsappMessage += `الهاتف: ${phone}\n`;
+                if (subject) whatsappMessage += `الموضوع: ${subject}\n`;
+                if (message) whatsappMessage += `الرسالة: ${message}\n`;
+                
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                whatsappBtn.href = `https://wa.me/966552701385?text=${encodedMessage}`;
+            }
+        });
     </script>
   </body>
 </html>
