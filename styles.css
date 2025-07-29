@@ -4,6 +4,7 @@
   --accent-color: #12a6de;
   --dark-color: #1a1a1a;
   --light-gray: #f8f9fa;
+  
   --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f39c12 100%);
   --gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
 }
