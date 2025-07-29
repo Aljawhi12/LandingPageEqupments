@@ -14,6 +14,8 @@
       name="keywords"
       content="ورشة, معدات ثقيلة, صيانة, إصلاح, سيارات, رافعات, ورشة صيانة رافعات, ورشة معدات ثقيلة"
     />
+      <link rel="icon" href="images/logo/logo-ar.jpeg" type="image/jpeg" />
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <meta
@@ -78,18 +80,38 @@
         <i class="fas fa-tools floating-icon fa-3x"></i>
       </div>
 
-      <div class="container">
+      <div class="container text-center">
+        <div
+          class="d-flex justify-content-center align-items-center mb-4"
+          style="min-height: 120px"
+        >
+          <img
+            src="images/logo/logo-ar.jpeg"
+            alt="شعار"
+            class="img-fluid logo lang-logo"
+            data-lang="ar"
+            style="max-width: 180px; height: auto"
+          />
+          <img
+            src="images/logo/logo-en.jpeg"
+            alt="Logo"
+            class="img-fluid logo lang-logo d-none"
+            data-lang="en"
+            style="max-width: 180px; height: auto"
+          />
+        </div>
+
         <div class="hero-content">
           <h1
             class="hero-title"
-            data-ar="ورشة إصلاح المعدات الثقيلة"
-            data-en="Heavy Equipment Workshop"
+            data-ar="  شركة التنفيذ الافضل لصيانة السيارات و المعدات"
+            data-en="Perfect Repair Company for Cars and Heavy Equipment"
           >
             ورشة إصلاح المعدات الثقيلة
           </h1>
           <p
             class="hero-subtitle"
-            data-ar="خبرة تزيد عن 15 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة"
+            data-ar="خبرة تزيد عن 20 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة"
             data-en="Over 20 years of experience in maintenance and repair of all types of heavy equipment"
           >
             خبرة تزيد عن 20 عاماً في صيانة وإصلاح جميع أنواع المعدات الثقيلة
@@ -483,7 +505,7 @@
           <div class="col-lg-6 fade-in">
             <div class="about-image">
               <img
-                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23f39c12' width='600' height='400'/><g fill='%23fff' opacity='0.1'><rect x='50' y='50' width='100' height='80'/><rect x='200' y='100' width='120' height='60'/><rect x='350' y='80' width='90' height='100'/><circle cx='150' cy='300' r='40'/><circle cx='350' cy='320' r='50'/><circle cx='500' cy='300' r='35'/></g><text x='300' y='200' text-anchor='middle' fill='%23fff' font-size='24' font-weight='bold'>Heavy Equipment</text><text x='300' y='230' text-anchor='middle' fill='%23fff' font-size='18'>Workshop</text></svg>"
+                src="images/aboutus/whywe.jpeg"
                 alt="Heavy Equipment Workshop"
                 class="img-fluid"
               />
@@ -564,8 +586,8 @@
                 <i class="fas fa-phone"></i>
               </div>
               <h4 data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h4>
-              <p>+966 50 123 4567</p>
-              <p>+966 11 456 7890</p>
+              <p>+966566370000</p>
+              <p>+966566524444</p>
             </div>
           </div>
 
@@ -575,8 +597,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <h4 data-ar="راسلنا" data-en="Email Us">راسلنا</h4>
-              <p>info@workshop.com</p>
-              <p>service@workshop.com</p>
+              <p>perfectco.car@gmail.com</p>
             </div>
           </div>
 
@@ -964,6 +985,25 @@
           whatsappBtn.href = `https://wa.me/96656370000?text=${encodedMessage}`;
         }
       });
+      function updateContent(lang) {
+        const elements = document.querySelectorAll("[data-ar][data-en]");
+        elements.forEach((element) => {
+          if (lang === "ar") {
+            element.textContent = element.getAttribute("data-ar");
+          } else {
+            element.textContent = element.getAttribute("data-en");
+          }
+        });
+
+        // Toggle logo visibility
+        document.querySelectorAll(".lang-logo").forEach((img) => {
+          if (img.dataset.lang === lang) {
+            img.classList.remove("d-none");
+          } else {
+            img.classList.add("d-none");
+          }
+        });
+      }
     </script>
   </body>
 </html>
