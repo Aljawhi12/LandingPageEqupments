@@ -71,7 +71,61 @@
       <i class="fas fa-language"></i>
       <span id="langText">EN</span>
     </button>
-
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <h1
+            data-ar="  شركة التنفيذ الافضل "
+            data-en="Perfect Repair Company "
+          >
+            شركة التنفيذ الافضل
+          </h1>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">
+                <span class="en-text" data-ar="الرئيسية" data-en="Home">الرئيسية</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">
+                <span class="en-text" data-ar="الخدمات" data-en="Services">الخدمات</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">
+                <span class="en-text" data-ar="من نحن" data-en="About Us">من نحن</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">
+                <span data-ar="معرض الصور"data-en="Gallery" >معرض الصور</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                <span class="en-text" 
+                data-ar="اتصل بنا"
+                data-en="Contact">اتصل بنا</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="floating-icons">
@@ -258,6 +312,195 @@
         </div>
       </div>
     </section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- <div class="col-lg-6 fade-in">
+            <div class="about-image">
+              <img
+                src="images/aboutus/whywe.jpeg"
+                alt="Heavy Equipment Workshop"
+                class="img-fluid"
+              />
+            </div>
+          </div> -->
+          <div class="col-lg-6 fade-in">
+            <div class="about-content">
+              <h2 data-ar="من نحن؟" data-en="Who We Are?">من نحن؟</h2>
+              <p
+                data-ar="نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد لأكثر من 20 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة لعملائنا الكرام."
+                data-en="We are a workshop specialized in repairing and maintaining heavy equipment with experience spanning over 20 years in this field. We pride ourselves on providing high-quality services to our valued customers."
+              >
+                نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد
+                لأكثر من 20 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة
+                لعملائنا الكرام.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="فريق عمل مؤهل ومدرب على أعلى مستوى"
+                    data-en="Qualified and highly trained workforce"
+                    >فريق عمل مؤهل ومدرب على أعلى مستوى</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="استخدام أحدث التقنيات والأدوات"
+                    data-en="Using the latest technologies and tools"
+                    >استخدام أحدث التقنيات والأدوات</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="قطع غيار أصلية ومضمونة"
+                    data-en="Original and guaranteed spare parts"
+                    >قطع غيار أصلية ومضمونة</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    data-ar="أسعار تنافسية وضمان على الخدمة"
+                    data-en="Competitive prices and service warranty"
+                    >أسعار تنافسية وضمان على الخدمة</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Counter Section -->
+    <section class="stats-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6" data-aos="fade-up">
+            <div class="stat-item">
+              <i class="fas fa-users stat-icon"></i>
+              <div class="stat-number" data-target="5000">0</div>
+              <div class="stat-label">
+                <span class="en-text">Happy Customers</span>
+                <span class="ar-text" style="display: none">عملاء سعداء</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-item">
+              <i class="fas fa-car stat-icon"></i>
+              <div class="stat-number" data-target="12000">0</div>
+              <div class="stat-label">
+                <span class="en-text">Vehicles Repaired</span>
+                <span class="ar-text" style="display: none"
+                  >مركبة تم إصلاحها</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-item">
+              <i class="fas fa-award stat-icon"></i>
+              <div class="stat-number" data-target="15">0</div>
+              <div class="stat-label">
+                <span class="en-text">Years Experience</span>
+                <span class="ar-text" style="display: none">سنوات الخبرة</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-item">
+              <i class="fas fa-wrench stat-icon"></i>
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">
+                <span class="en-text">Expert Technicians</span>
+                <span class="ar-text" style="display: none">فني خبير</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="en-text">Our Major Clients</span>
+          <span class="ar-text" style="display: none">عملاؤنا الرئيسيون</span>
+        </h2>
+        <div class="row g-4 mb-5">
+          <div class="col-md-3 col-6" data-aos="zoom-in">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>ARAMCO</text></svg>"
+                alt="Client 1"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>SABIC</text></svg>"
+                alt="Client 2"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>STC</text></svg>"
+                alt="Client 3"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>MAADEN</text></svg>"
+                alt="Client 4"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>NEOM</text></svg>"
+                alt="Client 5"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>SEC</text></svg>"
+                alt="Client 6"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="600">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>ALMARAI</text></svg>"
+                alt="Client 7"
+              />
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="700">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'><rect fill='%23ddd' width='200' height='100'/><text x='50%' y='50%' font-size='16' fill='%23999' text-anchor='middle' dy='.3em'>MOBILY</text></svg>"
+                alt="Client 8"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Gallery Section -->
     <section id="gallery" class="gallery-section">
       <div class="container">
@@ -274,7 +517,7 @@
         </div>
 
         <!-- Gallery Filters -->
-        <div class="gallery-filters fade-in">
+        <!-- <div class="gallery-filters fade-in">
           <button class="filter-btn active" data-filter="all">
             <span data-ar="الكل" data-en="All">الكل</span>
           </button>
@@ -290,7 +533,7 @@
           <button class="filter-btn" data-filter="bulldozers">
             <span data-ar="البلدوزرات" data-en="Bulldozers">البلدوزرات</span>
           </button>
-        </div>
+        </div> -->
 
         <!-- Gallery Grid -->
         <div class="gallery-grid fade-in" id="galleryGrid">
@@ -511,73 +754,9 @@
         </div>
       </div>
     </div>
-    <!-- About Section -->
-    <section id="about" class="about-section">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 fade-in">
-            <div class="about-image">
-              <img
-                src="images/aboutus/whywe.jpeg"
-                alt="Heavy Equipment Workshop"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="col-lg-6 fade-in">
-            <div class="about-content">
-              <h2 data-ar="من نحن؟" data-en="Who We Are?">من نحن؟</h2>
-              <p
-                data-ar="نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد لأكثر من 20 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة لعملائنا الكرام."
-                data-en="We are a workshop specialized in repairing and maintaining heavy equipment with experience spanning over 20 years in this field. We pride ourselves on providing high-quality services to our valued customers."
-              >
-                نحن ورشة متخصصة في إصلاح وصيانة المعدات الثقيلة مع خبرة تمتد
-                لأكثر من 20 عاماً في هذا المجال. نفتخر بتقديم خدمات عالية الجودة
-                لعملائنا الكرام.
-              </p>
-
-              <ul class="feature-list">
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <span
-                    data-ar="فريق عمل مؤهل ومدرب على أعلى مستوى"
-                    data-en="Qualified and highly trained workforce"
-                    >فريق عمل مؤهل ومدرب على أعلى مستوى</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <span
-                    data-ar="استخدام أحدث التقنيات والأدوات"
-                    data-en="Using the latest technologies and tools"
-                    >استخدام أحدث التقنيات والأدوات</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <span
-                    data-ar="قطع غيار أصلية ومضمونة"
-                    data-en="Original and guaranteed spare parts"
-                    >قطع غيار أصلية ومضمونة</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i>
-                  <span
-                    data-ar="أسعار تنافسية وضمان على الخدمة"
-                    data-en="Competitive prices and service warranty"
-                    >أسعار تنافسية وضمان على الخدمة</span
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section py-5">
       <div class="container">
         <div class="section-title fade-in">
           <h2 data-ar="تواصل معنا" data-en="Contact Us" style="color: white">
@@ -632,188 +811,188 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4" data-aos="fade-right">
+            <div class="container">
+              <!-- Contact Form -->
+              <div class="row justify-content-center mt-5">
+                <div class="col-lg-8 fade-in">
+                  <form
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScGWq1teRUvs_gfqJO3-6BsgT0cSWBuhvxoDhrbwGLABsy25w/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                    class="contact-form p-4"
+                  >
+                    <div class="mb-3">
+                      <label
+                        for="name"
+                        class="form-label"
+                        data-ar="الاسم"
+                        data-en="Name"
+                      >
+                        <i class="fas fa-user me-2"></i>الاسم
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="entry.2005620554"
+                        required
+                        placeholder="أدخل اسمك الكامل"
+                      />
+                    </div>
 
-        <!-- Contact Form -->
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-8 fade-in">
-            <div id="success-message" class="success-message">
-              <i class="fas fa-check-circle me-2"></i>
-              <span
-                data-ar="تم إرسال رسالتك بنجاح! سنتواصل معك قريباً"
-                data-en="Your message has been sent successfully! We will contact you soon"
-              >
-                تم إرسال رسالتك بنجاح! سنتواصل معك قريباً
-              </span>
-            </div>
+                    <div class="mb-3">
+                      <label
+                        for="email"
+                        class="form-label"
+                        data-ar="البريد الإلكتروني"
+                        data-en="Email"
+                      >
+                        <i class="fas fa-envelope me-2"></i>البريد الإلكتروني
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="entry.1045781291"
+                        required
+                        placeholder="example@email.com"
+                      />
+                    </div>
 
-            <div id="error-message" class="error-message">
-              <i class="fas fa-exclamation-triangle me-2"></i>
-              <span
-                data-ar="حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى"
-                data-en="An error occurred while sending the message. Please try again"
-              >
-                حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى
-              </span>
-            </div>
+                    <div class="mb-3">
+                      <label
+                        for="phone"
+                        class="form-label"
+                        data-ar="رقم الهاتف"
+                        data-en="Phone Number"
+                      >
+                        <i class="fas fa-phone me-2"></i>رقم الهاتف (اختياري)
+                      </label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        name="entry.1166974658"
+                        placeholder="+966 50 123 4567"
+                      />
+                    </div>
 
-            <form
-              action="https://docs.google.com/forms/d/e/1FAIpQLScGWq1teRUvs_gfqJO3-6BsgT0cSWBuhvxoDhrbwGLABsy25w/formResponse"
-              method="POST"
-              target="hidden_iframe"
-              class="contact-form p-4"
-            >
-              <div class="mb-3">
-                <label
-                  for="name"
-                  class="form-label"
-                  data-ar="الاسم"
-                  data-en="Name"
-                >
-                  <i class="fas fa-user me-2"></i>الاسم
-                </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="entry.2005620554"
-                  required
-                  placeholder="أدخل اسمك الكامل"
-                />
-              </div>
+                    <div class="mb-3">
+                      <label
+                        for="subject"
+                        class="form-label"
+                        data-ar="الموضوع"
+                        data-en="Subject"
+                      >
+                        <i class="fas fa-tag me-2"></i>الموضوع
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        name="entry.839337160"
+                        required
+                        placeholder="موضوع الرسالة"
+                      />
+                    </div>
 
-              <div class="mb-3">
-                <label
-                  for="email"
-                  class="form-label"
-                  data-ar="البريد الإلكتروني"
-                  data-en="Email"
-                >
-                  <i class="fas fa-envelope me-2"></i>البريد الإلكتروني
-                </label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="entry.1045781291"
-                  required
-                  placeholder="example@email.com"
-                />
-              </div>
+                    <div class="mb-4">
+                      <label
+                        for="message"
+                        class="form-label"
+                        data-ar="رسالتك"
+                        data-en="Your Message"
+                      >
+                        <i class="fas fa-comment me-2"></i>رسالتك
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        name="entry.474068459"
+                        rows="5"
+                        required
+                        placeholder="اكتب رسالتك هنا..."
+                      ></textarea>
+                    </div>
 
-              <div class="mb-3">
-                <label
-                  for="phone"
-                  class="form-label"
-                  data-ar="رقم الهاتف"
-                  data-en="Phone Number"
-                >
-                  <i class="fas fa-phone me-2"></i>رقم الهاتف (اختياري)
-                </label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  name="entry.1166974658"
-                  placeholder="+966 50 123 4567"
-                />
-              </div>
+                    <!-- Hidden field to specify recipient -->
+                    <input
+                      type="hidden"
+                      name="_to"
+                      value="alialjawhi0@gmail.com"
+                    />
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="رسالة جديدة من موقع الورشة"
+                    />
+                    <input type="hidden" name="_replyto" value="" />
+                    <input type="hidden" name="_next" value="" />
 
-              <div class="mb-3">
-                <label
-                  for="subject"
-                  class="form-label"
-                  data-ar="الموضوع"
-                  data-en="Subject"
-                >
-                  <i class="fas fa-tag me-2"></i>الموضوع
-                </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="subject"
-                  name="entry.839337160"
-                  required
-                  placeholder="موضوع الرسالة"
-                />
-              </div>
-
-              <div class="mb-4">
-                <label
-                  for="message"
-                  class="form-label"
-                  data-ar="رسالتك"
-                  data-en="Your Message"
-                >
-                  <i class="fas fa-comment me-2"></i>رسالتك
-                </label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="entry.474068459"
-                  rows="5"
-                  required
-                  placeholder="اكتب رسالتك هنا..."
-                ></textarea>
-              </div>
-
-              <!-- Hidden field to specify recipient -->
-              <input type="hidden" name="_to" value="alialjawhi0@gmail.com" />
-              <input
-                type="hidden"
-                name="_subject"
-                value="رسالة جديدة من موقع الورشة"
-              />
-              <input type="hidden" name="_replyto" value="" />
-              <input type="hidden" name="_next" value="" />
-
-              <!-- <button type="submit" class="btn btn-primary w-100">
+                    <!-- <button type="submit" class="btn btn-primary w-100">
                             <i class="fas fa-paper-plane me-2"></i>
                             <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
                         </button> -->
 
-              <!-- Alternative WhatsApp Button -->
-              <div class="text-center mt-3">
-                <p class="mb-2" style="color: #666">أو تواصل معنا مباشرة:</p>
-                <a
-                  href="https://wa.me/966566370000"
-                  class="btn btn-success w-100"
-                  target="_blank"
-                  id="whatsappBtn"
-                >
-                  <i class="fab fa-whatsapp me-2"></i>
-                  واتساب مباشر
-                </a>
-              </div>
+                    <!-- Alternative WhatsApp Button -->
+                    <div class="text-center mt-3">
+                      <p class="mb-2" style="color: #666">
+                        أو تواصل معنا مباشرة:
+                      </p>
+                      <a
+                        href="https://wa.me/966566370000"
+                        class="btn btn-success w-100"
+                        target="_blank"
+                        id="whatsappBtn"
+                      >
+                        <i class="fab fa-whatsapp me-2"></i>
+                        واتساب مباشر
+                      </a>
+                    </div>
 
-              <!-- Hidden iframe for form submission -->
-              <iframe
-                name="hidden_iframe"
-                id="hidden_iframe"
-                style="display: none"
-              ></iframe>
-            </form>
+                    <!-- Hidden iframe for form submission -->
+                    <iframe
+                      name="hidden_iframe"
+                      id="hidden_iframe"
+                      style="display: none"
+                    ></iframe>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4" data-aos="fade-left">
+            <div class="container text-center">
+              <h2 class="mb-4">موقعنا</h2>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps?q=24.601486319542865, 46.798804815357464&z=15&output=embed"
+                  width="100%"
+                  height="450"
+                  style="border: 0; border-radius: 15px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <!-- <div class="mt-4 text-white">
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i>
+                <span class="en-text">Riyadh, Saudi Arabia</span>
+                <span class="ar-text" style="display: none"
+                  >الرياض، المملكة العربية السعودية</span
+                >
+              </p>
+              <p><i class="fas fa-phone me-2"></i>+966 50 123 4567</p>
+              <p><i class="fas fa-envelope me-2"></i>info@perfectrepair.sa</p>
+            </div> -->
           </div>
         </div>
       </div>
     </section>
-    <!-- Location Section -->
-    <section id="location" class="map-section py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">موقعنا</h2>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps?q=24.60419657285548, 46.83025498285135&z=15&output=embed"
-            width="100%"
-            height="450"
-            style="border: 0; border-radius: 15px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
