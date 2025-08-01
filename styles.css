@@ -44,6 +44,23 @@ body {
 body[dir="ltr"] {
   font-family: "Inter", sans-serif;
 }
+.navbarTitle {
+  font-size: 2rem; /* default for desktop */
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .navbarTitle {
+    font-size: 1.2rem; /* smaller size for tablets/phones */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbarTitle {
+    font-size: 1rem; /* even smaller for small phones */
+  }
+}
 
 /* Typography */
 h1,
