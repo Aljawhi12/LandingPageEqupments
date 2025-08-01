@@ -1194,6 +1194,189 @@
           whatsappBtn.href = `https://wa.me/96656370000?text=${encodedMessage}`;
         }
       });
+      //
+      //sart new code 
+      // Update RTL icon margins
+        function updateIconMargins(isRtl) {
+            const icons = document.querySelectorAll('.fa-check-circle, .fa-map-marker-alt, .fa-phone, .fa-envelope');
+            icons.forEach(icon => {
+                if (isRtl) {
+                    icon.classList.remove('me-2');
+                    icon.classList.add('ms-2');
+                } else {
+                    icon.classList.remove('ms-2');
+                    icon.classList.add('me-2');
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                if (target) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    const navbarToggler = document.querySelector('.navbar-toggler');
+                    
+                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        if (navbarToggler) {
+                            navbarToggler.click();
+                        }
+                    }
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (navbar) {
+                if (scrollTop > 50) {
+                    navbar.style.padding = '10px 0';
+                    navbar.style.background = 'rgba(26, 26, 46, 0.98)';
+                } else {
+                    navbar.style.padding = '15px 0';
+                    navbar.style.background = 'rgba(26, 26, 46, 0.95)';
+                }
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // WhatsApp Form Handler
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('name');
+                const phoneInput = document.getElementById('phone');
+                const emailInput = document.getElementById('email');
+                const serviceSelect = document.getElementById('service');
+                const messageInput = document.getElementById('message');
+                
+                const name = nameInput ? nameInput.value : '';
+                const phone = phoneInput ? phoneInput.value : '';
+                const email = emailInput ? emailInput.value : '';
+                const service = serviceSelect ? serviceSelect.value : '';
+                const message = messageInput ? messageInput.value : '';
+                
+                // Format message for WhatsApp
+                const whatsappMessage = `*New Inquiry from Website*%0A%0A` +
+                    `*Name:* ${name}%0A` +
+                    `*Phone:* ${phone}%0A` +
+                    `*Email:* ${email || 'Not provided'}%0A` +
+                    `*Service:* ${service}%0A` +
+                    `*Message:* ${message}`;
+                
+                // Replace with your actual WhatsApp number
+                const whatsappNumber = '966501234567';
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+                
+                // Open WhatsApp
+                window.open(whatsappURL, '_blank');
+                
+                // Reset form
+                this.reset();
+                
+                // Show success message
+                alert(isArabic ? 'تم إرسال رسالتك بنجاح!' : 'Your message has been sent successfully!');
+            });
+        }
+
+        // Gallery lightbox effect
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                if (!img) return;
+                
+                const modal = document.createElement('div');
+                modal.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10000;
+                    cursor: pointer;
+                `;
+                
+                const modalImg = document.createElement('img');
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+                modalImg.style.cssText = `
+                    max-width: 90%;
+                    max-height: 90%;
+                    object-fit: contain;
+                `;
+                
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+                
+                modal.addEventListener('click', function() {
+                    if (document.body.contains(modal)) {
+                        document.body.removeChild(modal);
+                    }
+                });
+            });
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.innerText = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Animate counters when they come into view
+        // const observerOptions = {
+        //     threshold: 0.5,
+        //     rootMargin: '0px'
+        // };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    if (!isNaN(target)) {
+                        animateCounter(entry.target, 0, target, 2000);
+                        entry.target.classList.add('animated');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all counter elements
+        document.querySelectorAll('.stat-number').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+      //end new code  
       function updateContent(lang) {
         const elements = document.querySelectorAll("[data-ar][data-en]");
         elements.forEach((element) => {
